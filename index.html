@@ -11,11 +11,13 @@
 
     <body>
         <div id="app">
-            <h1>Email Address Generator</h1>
-            <button @click="eMail">Generate 10 email addresses</button>
-            <ul>
-                <li v-for="email in emailList">{{email}}</li>
-            </ul>
+            <div id="container">
+                <h1>Email Address Generator</h1>
+                <button @click="eMail">Generate 10 email addresses</button>
+                <ul>
+                    <li v-for="email in emailList">{{email}}</li>
+                </ul>
+            </div>
         </div>
         
         <script src="js/main.js"></script>
