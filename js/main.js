@@ -8,19 +8,18 @@ createApp({
     },
     methods: {
         randomEmail() {
-                this.emailList = [];
+            this.emailList = [];
 
-                for (i = 0; i < 10; i++) {
-                    axios.get('https://flynn.boolean.careers/exercises/api/random/mail').then(response => {
-                        console.log("Ricevuto: ", response.data);
-                        let email = response.data.response;
-
-                        console.log (this.emailList.length)
-                        if (this.emailList.length < 10) {
-                            this.emailList.push(email);
-                        }
-                    });
-                }
+            for (i = 0; i < 10; i++) {
+                axios.get('https://flynn.boolean.careers/exercises/api/random/mail').then(response => {
+                    console.log("Ricevuto: ", response.data);
+                    let email = response.data.response;
+                    console.log (this.emailList.length)
+                    if (this.emailList.length < 10) {
+                        this.emailList.push(email);
+                    }
+                });
+            }
         }
     },
 
