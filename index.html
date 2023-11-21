@@ -13,8 +13,8 @@
         <div id="app">
             <div id="container">
                 <h1>Email Address Generator</h1>
-                <button @click="eMail">Generate 10 email addresses</button>
-                <ul>
+                <button @click="randomEmail()">Generate 10 email addresses</button>
+                <ul v-if="emailList.length > 9">
                     <li v-for="email in emailList">{{email}}</li>
                 </ul>
             </div>
